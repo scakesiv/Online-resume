@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 - My Resume</title>
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="style/style_responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Montserrat:wght@200&family=Nunito+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="myjava.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-my-resume">
+            <a href="#top">MY RESUME</a>
+        </div>
+
+        <a href="#" class="toggle-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <nav class="navbar">
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#general-info">GENERAL INFO</a></li>
+                <li><a href="#EDU">EDUCATION</a></li>
+                <li><a href="#internship">INTERNSHIP & PROJECT</a></li>
+                <li><a href="#work-experience">WORK EXPERIENCE</a></li>
+                <li><a href="#skill">SKILLS</a></li>
+                </ul>
+        </div>
+        </nav> 
+        
+    </header>
+            <!--break-->
+            <div class="break"></div>
+            <!--break-->
+            <div class="slideshow-img-container">
+                <div class="gallery">
+                    <img class="my-slide" src="img/img-2.jpeg">
+                    <img class="my-slide" src="img/img-10.jpeg">
+                    <img class="my-slide" src="img/img-5.jpeg">
+                    <img class="my-slide" src="img/img-1.jpeg">
+                </div>
+                <div style="text-align: center;padding-top: 1.2rem; font-size: 2rem;font-style: italic;"> SIVANART THEPWONG</div>
+                
+                <!-- Pseudo div to align contact-info at the center -->
+                <div style="display: flex; flex-direction: column; align-items: center;">    
+                <div class="my-contact">
+                    <i class="fa fa-phone" style="font-size:1rem; color:gray;"></i>
+                    <a href="tel:+9961426247"><p>096-1426247</p></a>
+                    <i class="fa fa-envelope" style="font-size:1rem;color: gray;"></i>
+                    <a href="mailto:sivanart.th@gmail.com"><p>Sivanart.th@gmail.com</p></a>
+                </div>
+                </div>
+                
+                <button id="leave-msg-btn" class="leave-msg-btn" onclick="openForm()">LEAVE MESSAGE</button>
+                   
+                <div class="leave-msg-form" id="leave-msg"> 
+                        <form method = "post" style="display: flex; flex-direction: column; align-items: center;">
+                        <input type="text" id="name" placeholder="NAME" required>
+                        <input type="tel" maxlength="10" id="tel" placeholder="TEL">
+                        <input type="email" id="mail" placeholder="EMAIL" required>
+                        <textarea row ="30" cols = "50" placeholder="LEAVE MESSAGE HERE" id="msg"></textarea>
+                        <button class="send-email-to-siv" onclick="sendemail()">SEND</button>
+                        </form>
+                    </div>
+                
+            </div>
+            <!--break-->
+            <div class="break" id="general-info"></div>
+            <!--break-->
+        <section class="pseudo-body">
+            <div class="general-container">
+                <div class="profile-img-container">
+                    <img class="profile-img" src="img/profile-1.jpeg" alt="My profile picture">
+                </div>
+                <div class="general-info-container">
+                    <p class="header-general-info">GENERAL INFORMATION</p>
+                    <div class="detail-general-info" style="display: grid; grid-template-columns: 1fr 1fr;">
+                    <p class="general-info-content">NAME : </p><p class="general-info-siv">SIVANART THEPWONG</p>
+                    <p class="general-info-content">NICKNAME : </p><p class="general-info-siv">CAKE</p>
+                    <p class="general-info-content">DATE OF BIRTH : </p><p class="general-info-siv">7 JANUARY 1997 (26 YRS OLD)</p>
+                    <p class="general-info-content">SEX : </p><p class="general-info-siv">FEMALE</p>
+                    <p class="general-info-content">REGION : </p><p class="general-info-siv">CHIANG RAI, THAILAND</p>
+                    <p class="general-info-content">NATIONALITY : </p><p class="general-info-siv">THAI</p>
+                    <p class="general-info-content">RACE : </p><p class="general-info-siv">THAI</p>
+                    <p class="general-info-content">HEIGHT : </p><p class="general-info-siv">162 CM</p>
+                    <p class="general-info-content">WEIGHT : </p><p class="general-info-siv">57 KG</p>
+                    <p class="general-info-content">BLOOD TYPE : </p><p class="general-info-siv">B TYPE</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <!--break-->
+            <div class="break" id="EDU"></div>
+            <!--break-->
+
+        <section class="pseudo-body">
+            <p class="edu-header">EDUCATION HISTORY</p>
+            <div class="edu-history-container">
+                <div class="institude-img">
+                    <img src="img/edu-2.jpeg">
+                </div>
+                <div class="edu-detail">
+                    <p class="edu-degree">HIGH SCHOOL I</p>
+                    <p class="institude-name">WATPAPRADOO SCHOOL (RAYONG)</p>
+                    <p class="GPA">ENGLISH PROGRAM (GPA : 3.89)</p>
+                </div>
+                <!--View details button-->
+                <div class="study-period"><p>2009 - 2011</p>
+                    <button class="edu-button" id="high-school-1-btn" onclick="showElement('high-school-1-detail',this.id)"> VIEW DETAILS </button>
+                </div>
+            </div>
+            <!--Hidden Section-->
+            <div id="high-school-1-detail" style="display: none;">This is hidding area
+            <div class="activity-container">
+                .
+            </div>
+            </div>
+            <!--End of hidden section-->
+
+            <div class="edu-history-container">
+                <div class="institude-img">
+                    <img src="img/edu-3.jpeg">
+                </div>
+                <div class="edu-detail" onclick="showElement()">
+                    <p class="edu-degree">HIGH SCHOOL II</p>
+                    <p class="institude-name">SAMAKKHI WITTAYAKHOM SCHOOL (CHIANG RAI)</p>
+                    <p class="GPA">MATH-SCINCE (GPA : 3.64)</p>
+                </div>
+                <div class="study-period">
+                    <p>2012 - 2015</p>
+                    <button class="edu-button" id="high-school-2-btn" onclick="showElement('high-school-2-detail',this.id)"> VIEW DETAILS</button>
+                </div>
+            </div>
+        <!--Hidden Section-->
+        <div id="high-school-2-detail" style="display: none;">This is hidding area
+                <div class="activity-container"> 
+                    .
+                </div>
+        </div>
+        <!--End of hidden section-->
+            <div class="edu-history-container">
+                <div class="institude-img">
+                    <img src="img/edu-4.jpeg" style="object-position: 0px 10px;">
+                </div>       
+                <div class="edu-detail">
+                    <p class="edu-degree">BACHELOR DEGREE</p>
+                    <p class="institude-name">CHIANG MAI UNIVERSITY (CHIANG MAI)</p>
+                    <p class="GPA">MECHANICAL ENGINEERING (GPA : 2.89)</p>
+                </div>
+                <div class="study-period">
+                    <p>2015 - 2018</p>
+                    <button class="edu-button" id="bachelor-btn" onclick="showElement('bachelor-detail',this.id)"> VIEW DETAILS </button>
+                </div>
+            </div>
+            <!--Hidden Section-->
+            <div id="bachelor-detail" style="display: none;">This is hidding area
+                <div class="activity-container">
+                    .
+                </div>
+                </div>
+            <!--End of hidden section-->
+        </section>
+            <!--break-->
+            <div class="break" id="internship"></div>
+            <!--break-->
+        <section>
+            <p style="text-align: center;font-size: 3vw; margin-top: 1vw;">INTERNSHIP & PROJECT</p>
+            <div class="internship-container">
+                <img class="kcu-logo" src="img/kcu-logo.jpeg">
+                <div class="intern-header">
+                    <a href="https://www.kcuservices.com/" target="_blank">KCU Service Co.,</a>
+                </div>
+            </div>
+            <div class="internship-responsible">Responsible</div>
+        </section>
+</div>
+</body>
+</html>
